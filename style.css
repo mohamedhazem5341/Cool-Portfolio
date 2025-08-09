@@ -245,6 +245,8 @@
     }
 
     .proj {
+      text-decoration: none;
+      color: var(--text);
       position: relative;
       padding: 18px;
       border-radius: 14px;
@@ -269,6 +271,12 @@
 
     .proj .title {
       font-weight: 700
+    }
+    .proj .peak{
+      font-size: 14px;
+      color: var(--text);
+      margin-top: 6px;
+      opacity: 0.8
     }
 
     .proj .meta {
