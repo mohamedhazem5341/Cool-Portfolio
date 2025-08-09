@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio — Single File (Vanilla HTML/CSS/JS)</title>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="logo">P</div>
+        <nav class="menu" aria-label="Main">
+          <button class="nav-btn active" data-target="home" title="Home">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z"
+              />
+            </svg>
+          </button>
+          <button class="nav-btn" data-target="about" title="About">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 12a2 2 0 100-4 2 2 0 000 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+          </button>
+          <button class="nav-btn" data-target="projects" title="Projects">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 13h8V3H3v10zm10 8h8V3h-8v18zM13 13h8V3h-8v10z" />
+            </svg>
+          </button>
+          <button
+            class="nav-btn"
+            id="todo-open"
+            data-target="todo"
+            title="To-do"
+          >
+            <svg viewBox="0 0 24 24">
+              <path d="M9 11l2 2 4-4" />
+              <path d="M21 4H7v14h14V4zM5 6H3v14a2 2 0 002 2h14v-2H5V6z" />
+            </svg>
+          </button>
+          <button class="nav-btn" data-target="settings" title="Settings">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 8a4 4 0 100 8 4 4 0 000-8z" />
+              <path
+                d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06A2 2 0 012.28 17.9l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82L4.21 4.28A2 2 0 017 1.45l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V1a2 2 0 014 0v.09c.09.7.56 1.29 1 1.51h.12a1.65 1.65 0 001.82-.33L20.72 4.28a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82v.12c.22.44.81.91 1.51 1H23a2 2 0 010 4h-.09c-.7.09-1.29.56-1.51 1z"
+              />
+            </svg>
+          </button>
+        </nav>
+
+        <div style="flex: 1"></div>
+        <div style="font-size: 12px; color: var(--muted)">Made By <a class="creator" href="https://github.com/mohamedhazem5341">Mohamed Hazem</a></div>
+      </aside>
+
+      <main class="panel">
+        <div class="header">
+          <div class="greeting">
+            <h1>Hi there, <span style="color: var(--primary)">John</span></h1>
+            <p>What would you like to know? Quick portfolio overview below.</p>
+          </div>
+          <div class="controls">
+            <button
+              id="open-settings-small"
+              style="
+                padding: 10px 14px;
+                border-radius: 10px;
+                border: 0;
+                background: linear-gradient(
+                  90deg,
+                  var(--primary),
+                  var(--accent)
+                );
+                color: white;
+                cursor: pointer;
+              "
+            >
+              Customize
+            </button>
+          </div>
+        </div>
+
+        <div class="pages">
+          <!-- HOME -->
+          <section id="home" class="page active">
+            <div class="cards">
+              <article class="card reveal">
+                <h3>About</h3>
+                <p>Hero, skills & contact with smooth animations.</p>
+              </article>
+              <article class="card reveal">
+                <h3>Projects</h3>
+                <p>Animated and unusual project cards.</p>
+              </article>
+              <article class="card reveal">
+                <h3>To-do</h3>
+                <p>Persistent local-storage to-do list and actions.</p>
+              </article>
+              <article class="card reveal">
+                <h3>Settings</h3>
+                <p>Change theme colors and site background image.</p>
+              </article>
+            </div>
+          </section>
+
+          <!-- ABOUT -->
+          <section id="about" class="page">
+            <div class="hero reveal">
+              <div class="avatar-container">
+                <img class="avatar" src="/img/logo.jpeg" alt="">
+                <!-- <div class="avatar">JS</div> -->
+              </div>
+              <div>
+                <h2>About Me</h2>
+                <p>
+                  I build delightful web experiences using vanilla HTML, CSS and
+                  JS. I love clean UI, performance and small delightful
+                  interactions.
+                </p>
+                <div class="skills">
+                  <span class="skill">HTML</span>
+                  <span class="skill">CSS</span>
+                  <span class="skill">JavaScript</span>
+                  <span class="skill">Accessibility</span>
+                  <span class="skill">UI/UX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact reveal">
+              <h3>Contact</h3>
+              <form id="contact-form">
+                <input type="text" placeholder="Your name" required />
+                <input type="email" placeholder="Your email" required />
+                <textarea placeholder="Message" rows="4" required></textarea>
+                <button
+                  type="submit"
+                  style="
+                    padding: 10px 14px;
+                    border-radius: 8px;
+                    border: 0;
+                    background: var(--primary);
+                    color: white;
+                    cursor: pointer;
+                  "
+                >
+                  Send
+                </button>
+              </form>
+            </div>
+          </section>
+
+          <!-- PROJECTS -->
+          <section id="projects" class="page">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+              <article class="proj reveal">
+                <div>
+                  <div class="tag">Web</div>
+                  <div class="title">Interactive Album UI</div>
+                </div>
+                <div class="meta">
+                  <small>CSS-only animations & JS</small>
+                </div>
+              </article>
+              <article class="proj reveal">
+                <div>
+                  <div class="tag">Tool</div>
+                  <div class="title">Tiny Admin Panel</div>
+                </div>
+                <div class="meta"><small>Vanilla SPA style</small></div>
+              </article>
+              <article class="proj reveal">
+                <div>
+                  <div class="tag">UI</div>
+                  <div class="title">Portfolio Template</div>
+                </div>
+                <div class="meta">
+                  <small>Design-forward interactions</small>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- TODO -->
+          <section id="todo" class="page">
+            <h2>To-do</h2>
+            <div class="todo">
+              <div class="todo-controls">
+                <input
+                  id="new-task"
+                  placeholder="Add new task"
+                  style="
+                    flex: 1;
+                    padding: 8px;
+                    border-radius: 8px;
+                    border: 1px solid #e6e9ee;
+                  "
+                />
+                <button
+                  id="add-task"
+                  style="
+                    padding: 8px 12px;
+                    border-radius: 8px;
+                    border: 0;
+                    background: var(--primary);
+                    color: white;
+                    cursor: pointer;
+                  "
+                >
+                  Add
+                </button>
+                <button
+                  id="clear-tasks"
+                  style="
+                    padding: 8px 12px;
+                    border-radius: 8px;
+                    border: 0;
+                    background: #ddd;
+                    cursor: pointer;
+                  "
+                >
+                  Clear
+                </button>
+              </div>
+              <div class="todo-list" id="todo-list"></div>
+            </div>
+          </section>
+
+          <!-- SETTINGS -->
+          <section id="settings" class="page">
+            <h2>Settings</h2>
+            <div class="settings-grid">
+              <div>
+                <h3>Theme</h3>
+                <div
+                  style="
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                    margin-top: 8px;
+                  "
+                >
+                  <label
+                    >Primary
+                    <input id="primary-color" type="color" value="#6b46ff"
+                  /></label>
+                  <label
+                    >Accent
+                    <input id="accent-color" type="color" value="#ff4d6d"
+                  /></label>
+                </div>
+
+                <h3 style="margin-top: 14px">Background</h3>
+                <div
+                  style="
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    margin-top: 8px;
+                  "
+                >
+                  <input id="bg-upload" type="file" accept="image/*" />
+                  <button
+                    id="clear-bg"
+                    style="
+                      padding: 8px 12px;
+                      border-radius: 8px;
+                      border: 0;
+                      background: #ddd;
+                      cursor: pointer;
+                    "
+                  >
+                    Clear
+                  </button>
+                </div>
+
+                <div style="margin-top: 16px">
+                  <button
+                    id="save-theme"
+                    style="
+                      padding: 10px 14px;
+                      border-radius: 8px;
+                      border: 0;
+                      background: var(--primary);
+                      color: white;
+                      cursor: pointer;
+                    "
+                  >
+                    Save Preferences
+                  </button>
+                </div>
+              </div>
+              <div>
+                <div class="theme-sample">Theme Preview</div>
+                <p style="color: var(--muted); margin-top: 10px">
+                  Changes are applied live. Saving persists to localStorage.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script defer src="/main.js"></script>
+  </body>
+</html>
