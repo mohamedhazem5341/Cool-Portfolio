@@ -345,6 +345,30 @@
     /* small screens */
     @media (max-width:720px) {
       .app {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      height: 100vh;
+      padding: 24px
+    }
+      .sidebar {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.45));
+      border-radius: var(--radius);
+      padding: 12px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06)
+    }
+    .menu {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0px;
+      margin-top: 0px
+    }
+      .app {
         grid-template-columns: 72px 1fr;
         padding: 12px
       }
