@@ -41,6 +41,11 @@
       letter-spacing: 1px;
       font-weight: 700;
     }
+    .vm{
+      font-weight: 600;
+      text-decoration: underline;
+      color: var(--primary);
+    }
     /* layout */
     .app {
       display: grid;
